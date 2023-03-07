@@ -20,4 +20,12 @@ public class Professor {
         this.email = email;
         this.id = id;
     }
+
+    public void publicarTrabalho(int id, Trabalho trabalho, String area){
+        new Publicacao(id, trabalho, area);
+    }
+
+    public void removerTrabalho(Publicacao publicacao){
+        publicacao = null;
+    }
 }

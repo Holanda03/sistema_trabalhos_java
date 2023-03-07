@@ -20,4 +20,16 @@ public class Aluno {
         this.matricula = matricula;
         this.curso = curso;
     }
+
+    public void visualizarTrabalho(Publicacao publicacao){
+        System.out.println(publicacao.getTrabalho());
+    }
+
+    public void curtirTrabalho(Publicacao publicacao){
+        publicacao.armazenarCurtidas();
+    }
+
+    public void comentarTrabalho(Publicacao publicacao, String comentario){
+        publicacao.armazenarComentarios(comentario);
+    }
 }
