@@ -22,14 +22,26 @@ public class Aluno {
     }
 
     public void visualizarTrabalho(Publicacao publicacao){
-        System.out.println(publicacao.getTrabalho());
+        if (publicacao == null){
+            throw new RuntimeException("Essa publicação não existe. visualizarTrabalho()");
+        } else{
+            System.out.println(publicacao.getTrabalho());
+        }
     }
 
     public void curtirTrabalho(Publicacao publicacao){
-        publicacao.armazenarCurtidas();
+        if (publicacao == null){
+            throw new RuntimeException("Essa publicação não existe. curtirTrabalho()");
+        } else{
+            publicacao.armazenarCurtidas();
+        }
     }
 
     public void comentarTrabalho(Publicacao publicacao, String comentario){
-        publicacao.armazenarComentarios(comentario);
+        if (publicacao == null){
+            throw new RuntimeException("Essa publicação não existe. comentarTrabalho()");
+        } else{
+            publicacao.armazenarComentarios(comentario);
+        }
     }
 }

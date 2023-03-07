@@ -34,6 +34,11 @@ public class Trabalho {
         return area;
     }
 
+    @Override
+    public String toString(){
+        return "Título: " + titulo + " , Líder: " + lider.getNome() + ", Prof orientador: " + profOrientador.getNome() + ", Área: " + area;
+    }
+
     public Trabalho(String titulo, Aluno lider, Professor profOrientador, String area){
         this.id = id_default++;
         this.titulo = titulo;
