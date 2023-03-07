@@ -26,6 +26,10 @@ public class Professor {
     }
 
     public void removerTrabalho(Publicacao publicacao){
-        publicacao = null;
+        if (publicacao == null){
+            throw new RuntimeException("Publicação não existe.");
+        } else {
+            System.out.println("Publicação " + publicacao.getId() + " removida com sucesso.");
+        }
     }
 }

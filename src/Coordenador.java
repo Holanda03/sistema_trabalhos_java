@@ -5,6 +5,10 @@ public class Coordenador extends Professor{
     }
 
     public void removerAluno(Aluno aluno){
-        aluno = null;
+        if (aluno == null){
+            throw new RuntimeException("Aluno(a) não existe.");
+        } else {
+            System.out.println("Aluno(a) " + aluno.getNome() + " foi removido(a) com sucesso.");
+        }
     }
 }
