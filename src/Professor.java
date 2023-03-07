@@ -21,8 +21,8 @@ public class Professor {
         this.id = id;
     }
 
-    public void publicarTrabalho(int id, Trabalho trabalho, String area){
-        new Publicacao(id, trabalho, area);
+    public void publicarTrabalho(Trabalho trabalho, String area){
+        new Publicacao(trabalho, area);
     }
 
     public void removerTrabalho(Publicacao publicacao){

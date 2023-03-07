@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 public class Publicacao {
+    private static int id_default = 0;
+
     private int id;
     private Trabalho trabalho;
     private int curtidas = 0;
@@ -27,8 +29,8 @@ public class Publicacao {
         return area;
     }
 
-    public Publicacao(int id, Trabalho trabalho, String area){
-        this.id = id;
+    public Publicacao(Trabalho trabalho, String area){
+        this.id = id_default++;
         this.trabalho = trabalho;
         this.comentarios = new ArrayList<>();
         this.area = area;

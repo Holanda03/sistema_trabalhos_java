@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 public class Trabalho {
+    private static int id_default = 0;
+
     private int id;
     private String titulo;
     private Aluno lider;
@@ -32,8 +34,8 @@ public class Trabalho {
         return area;
     }
 
-    public Trabalho(int id, String titulo, Aluno lider, Professor profOrientador, String area){
-        this.id = id;
+    public Trabalho(String titulo, Aluno lider, Professor profOrientador, String area){
+        this.id = id_default++;
         this.titulo = titulo;
         this.lider = lider;
         this.profOrientador = profOrientador;
