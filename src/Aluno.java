@@ -1,4 +1,6 @@
 public class Aluno {
+    private static int matricula_default = 0;
+
     private String nome;
     private int matricula;
     private String curso;
@@ -15,9 +17,9 @@ public class Aluno {
         return curso;
     }
 
-    public Aluno(String nome, int matricula, String curso){
+    public Aluno(String nome, String curso){
         this.nome = nome;
-        this.matricula = matricula;
+        this.matricula = matricula_default++;
         this.curso = curso;
     }
 

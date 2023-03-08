@@ -1,7 +1,7 @@
 public class Coordenador extends Professor{
 
-    public Coordenador(String nome, String email, int id) {
-        super(nome, email, id);
+    public Coordenador(String nome, String email) {
+        super(nome, email);
     }
 
     public void removerAluno(Aluno aluno){

@@ -1,4 +1,6 @@
 public class Professor {
+    private static int id_default = 0;
+
     protected String nome;
     protected String email;
     protected int id;
@@ -15,10 +17,10 @@ public class Professor {
         return id;
     }
 
-    public Professor(String nome, String email, int id){
+    public Professor(String nome, String email){
         this.nome = nome;
         this.email = email;
-        this.id = id;
+        this.id = id_default++;
     }
 
     public void publicarTrabalho(Trabalho trabalho, String area){
